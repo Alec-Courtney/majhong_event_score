@@ -1,0 +1,1562 @@
+[
+    {
+        "game_id": "bb1349fd-8817-4c29-a4bc-0f47e2563c79",
+        "timestamp": "2025-06-13",
+        "results": [
+            {
+                "id": "青白、",
+                "score": 36900,
+                "rank": 1,
+                "final_score": 56.9
+            },
+            {
+                "id": "棋怪红尘笑",
+                "score": 35800,
+                "rank": 2,
+                "final_score": 15.8
+            },
+            {
+                "id": "言和一生推",
+                "score": 25200,
+                "rank": 3,
+                "final_score": -14.8
+            },
+            {
+                "id": "Krier",
+                "score": 2100,
+                "rank": 4,
+                "final_score": -57.9
+            }
+        ]
+    },
+    {
+        "game_id": "29df208b-10e1-4f81-ae54-7f2dffa27e01",
+        "timestamp": "2025-06-14",
+        "results": [
+            {
+                "id": "Baka9",
+                "score": 58200,
+                "rank": 1,
+                "final_score": 78.2
+            },
+            {
+                "id": "棋怪红尘笑",
+                "score": 20800,
+                "rank": 2,
+                "final_score": 0.8
+            },
+            {
+                "id": "Jerry32",
+                "score": 12000,
+                "rank": 3,
+                "final_score": -28.0
+            },
+            {
+                "id": "隔壁最穷老金",
+                "score": 9000,
+                "rank": 4,
+                "final_score": -51.0
+            }
+        ]
+    },
+    {
+        "game_id": "3a034f50-b3a2-4765-9aa6-a1f1f80aa218",
+        "timestamp": "2025-06-14",
+        "results": [
+            {
+                "id": "急急急不来的",
+                "score": 32200,
+                "rank": 1,
+                "final_score": 52.2
+            },
+            {
+                "id": "简朴斋人",
+                "score": 30500,
+                "rank": 2,
+                "final_score": 10.5
+            },
+            {
+                "id": "冬芝",
+                "score": 22500,
+                "rank": 3,
+                "final_score": -17.5
+            },
+            {
+                "id": "0归离0",
+                "score": 14800,
+                "rank": 4,
+                "final_score": -45.2
+            }
+        ]
+    },
+    {
+        "game_id": "9b8e30d8-8ac9-4b67-b784-5b3d15abbffb",
+        "timestamp": "2025-06-15",
+        "results": [
+            {
+                "id": "wdnmsstf",
+                "score": 44500,
+                "rank": 1,
+                "final_score": 64.5
+            },
+            {
+                "id": "0归离0",
+                "score": 25900,
+                "rank": 2,
+                "final_score": 5.9
+            },
+            {
+                "id": "seaean",
+                "score": 24900,
+                "rank": 3,
+                "final_score": -15.1
+            },
+            {
+                "id": "暖兮、橙子",
+                "score": 4700,
+                "rank": 4,
+                "final_score": -55.3
+            }
+        ]
+    },
+    {
+        "game_id": "8f8fc931-e72b-4ff8-85f9-4b1cf6d0ea10",
+        "timestamp": "2025-06-16",
+        "results": [
+            {
+                "id": "超级圣光铠甲",
+                "score": 39100,
+                "rank": 1,
+                "final_score": 59.1
+            },
+            {
+                "id": "思诺星梦",
+                "score": 34300,
+                "rank": 2,
+                "final_score": 14.3
+            },
+            {
+                "id": "pandenk",
+                "score": 30300,
+                "rank": 3,
+                "final_score": -9.7
+            },
+            {
+                "id": "wdnmsstf",
+                "score": -3700,
+                "rank": 4,
+                "final_score": -63.7
+            }
+        ]
+    },
+    {
+        "game_id": "71979fd8-584d-4b65-8552-c2cf3ee06a11",
+        "timestamp": "2025-06-16",
+        "results": [
+            {
+                "id": "济邦我的济邦啊",
+                "score": 30000,
+                "rank": 1,
+                "final_score": 50.0
+            },
+            {
+                "id": "0归离0",
+                "score": 26300,
+                "rank": 2,
+                "final_score": 6.3
+            },
+            {
+                "id": "冬芝",
+                "score": 22700,
+                "rank": 3,
+                "final_score": -17.3
+            },
+            {
+                "id": "青白、",
+                "score": 21000,
+                "rank": 4,
+                "final_score": -39.0
+            }
+        ]
+    },
+    {
+        "game_id": "faac8e55-ff27-4399-985c-963d95f06b70",
+        "timestamp": "2025-06-16",
+        "results": [
+            {
+                "id": "多胡动物",
+                "score": 34200,
+                "rank": 1,
+                "final_score": 54.2
+            },
+            {
+                "id": "laznig",
+                "score": 25200,
+                "rank": 2,
+                "final_score": 5.2
+            },
+            {
+                "id": "暖兮、橙子",
+                "score": 21100,
+                "rank": 3,
+                "final_score": -18.9
+            },
+            {
+                "id": "HuiQ",
+                "score": 19500,
+                "rank": 4,
+                "final_score": -40.5
+            }
+        ]
+    },
+    {
+        "game_id": "1b0286d9-132e-4a1c-b6b2-394a7e26da32",
+        "timestamp": "2025-06-16",
+        "results": [
+            {
+                "id": "seaean",
+                "score": 46900,
+                "rank": 1,
+                "final_score": 66.9
+            },
+            {
+                "id": "急急急不来的",
+                "score": 26800,
+                "rank": 2,
+                "final_score": 6.8
+            },
+            {
+                "id": "pandenk",
+                "score": 15600,
+                "rank": 3,
+                "final_score": -24.4
+            },
+            {
+                "id": "超级圣光铠甲",
+                "score": 10700,
+                "rank": 4,
+                "final_score": -49.3
+            }
+        ]
+    },
+    {
+        "game_id": "d1733403-d55b-47c8-84f3-03a21cb9040f",
+        "timestamp": "2025-06-17",
+        "results": [
+            {
+                "id": "迦楠大人",
+                "score": 34800,
+                "rank": 1,
+                "final_score": 54.8
+            },
+            {
+                "id": "隔壁最穷老金",
+                "score": 29500,
+                "rank": 2,
+                "final_score": 9.5
+            },
+            {
+                "id": "通辽侯",
+                "score": 23000,
+                "rank": 3,
+                "final_score": -17.0
+            },
+            {
+                "id": "天绫酱",
+                "score": 12700,
+                "rank": 4,
+                "final_score": -47.3
+            }
+        ]
+    },
+    {
+        "game_id": "c4f74da7-a874-4ef1-94fd-340037a5626a",
+        "timestamp": "2025-06-17",
+        "results": [
+            {
+                "id": "天绫酱",
+                "score": 55000,
+                "rank": 1,
+                "final_score": 75.0
+            },
+            {
+                "id": "0归离0",
+                "score": 27700,
+                "rank": 2,
+                "final_score": 7.7
+            },
+            {
+                "id": "青城士无双",
+                "score": 15000,
+                "rank": 3,
+                "final_score": -25.0
+            },
+            {
+                "id": "隔壁最穷老金",
+                "score": 2300,
+                "rank": 4,
+                "final_score": -57.7
+            }
+        ]
+    },
+    {
+        "game_id": "2789573f-51d1-4940-b1ec-3149ec2ffc5a",
+        "timestamp": "2025-06-18",
+        "results": [
+            {
+                "id": "迦楠大人",
+                "score": 37100,
+                "rank": 1,
+                "final_score": 57.1
+            },
+            {
+                "id": "青白、",
+                "score": 28200,
+                "rank": 2,
+                "final_score": 8.2
+            },
+            {
+                "id": "wdnmsstf",
+                "score": 23300,
+                "rank": 3,
+                "final_score": -16.7
+            },
+            {
+                "id": "Krier",
+                "score": 11400,
+                "rank": 4,
+                "final_score": -48.6
+            }
+        ]
+    },
+    {
+        "game_id": "7db46dce-8eb6-4a38-9ac5-41daed29527a",
+        "timestamp": "2025-06-18",
+        "results": [
+            {
+                "id": "Baka9",
+                "score": 35500,
+                "rank": 1,
+                "final_score": 55.5
+            },
+            {
+                "id": "冬芝",
+                "score": 24500,
+                "rank": 2,
+                "final_score": 4.5
+            },
+            {
+                "id": "迦楠大人",
+                "score": 24100,
+                "rank": 3,
+                "final_score": -15.9
+            },
+            {
+                "id": "简朴斋人",
+                "score": 15900,
+                "rank": 4,
+                "final_score": -44.1
+            }
+        ]
+    },
+    {
+        "game_id": "d37c5653-44f8-476e-b7a3-fd7074178444",
+        "timestamp": "2025-06-18",
+        "results": [
+            {
+                "id": "Jerry32",
+                "score": 52600,
+                "rank": 1,
+                "final_score": 72.6
+            },
+            {
+                "id": "急急急不来的",
+                "score": 31000,
+                "rank": 2,
+                "final_score": 11.0
+            },
+            {
+                "id": "laznig",
+                "score": 14600,
+                "rank": 3,
+                "final_score": -25.4
+            },
+            {
+                "id": "萌新就会送",
+                "score": 1800,
+                "rank": 4,
+                "final_score": -58.2
+            }
+        ]
+    },
+    {
+        "game_id": "6fbb9db7-9705-49f7-89a4-3119a5096f95",
+        "timestamp": "2025-06-18",
+        "results": [
+            {
+                "id": "Baka9",
+                "score": 63300,
+                "rank": 1,
+                "final_score": 83.3
+            },
+            {
+                "id": "思诺星梦",
+                "score": 24600,
+                "rank": 2,
+                "final_score": 4.6
+            },
+            {
+                "id": "暖兮、橙子",
+                "score": 10400,
+                "rank": 3,
+                "final_score": -29.6
+            },
+            {
+                "id": "HuiQ",
+                "score": 1700,
+                "rank": 4,
+                "final_score": -58.3
+            }
+        ]
+    },
+    {
+        "game_id": "bc821cd3-93ac-4ada-912e-8075d143d9f0",
+        "timestamp": "2025-06-19",
+        "results": [
+            {
+                "id": "0归离0",
+                "score": 33200,
+                "rank": 1,
+                "final_score": 53.2
+            },
+            {
+                "id": "济邦我的济邦啊",
+                "score": 30700,
+                "rank": 2,
+                "final_score": 10.7
+            },
+            {
+                "id": "暖兮、橙子",
+                "score": 20600,
+                "rank": 3,
+                "final_score": -19.4
+            },
+            {
+                "id": "言和一生推",
+                "score": 15500,
+                "rank": 4,
+                "final_score": -44.5
+            }
+        ]
+    },
+    {
+        "game_id": "131eccc8-b181-470f-b4d2-c3c63245fadb",
+        "timestamp": "2025-06-19",
+        "results": [
+            {
+                "id": "冬芝",
+                "score": 49600,
+                "rank": 1,
+                "final_score": 69.6
+            },
+            {
+                "id": "pandenk",
+                "score": 42500,
+                "rank": 2,
+                "final_score": 22.5
+            },
+            {
+                "id": "HuiQ",
+                "score": 8400,
+                "rank": 3,
+                "final_score": -31.6
+            },
+            {
+                "id": "通辽侯",
+                "score": -500,
+                "rank": 4,
+                "final_score": -60.5
+            }
+        ]
+    },
+    {
+        "game_id": "1574427e-d64e-429a-a482-9a15a7551009",
+        "timestamp": "2025-06-20",
+        "results": [
+            {
+                "id": "急急急不来的",
+                "score": 37500,
+                "rank": 1,
+                "final_score": 57.5
+            },
+            {
+                "id": "seaean",
+                "score": 29200,
+                "rank": 2,
+                "final_score": 9.2
+            },
+            {
+                "id": "Jerry32",
+                "score": 18700,
+                "rank": 3,
+                "final_score": -21.3
+            },
+            {
+                "id": "laznig",
+                "score": 14600,
+                "rank": 4,
+                "final_score": -45.4
+            }
+        ]
+    },
+    {
+        "game_id": "fc460432-53fb-41dd-bac4-be958f53eaad",
+        "timestamp": "2025-06-20",
+        "results": [
+            {
+                "id": "Krier",
+                "score": 54100,
+                "rank": 1,
+                "final_score": 74.1
+            },
+            {
+                "id": "seaean",
+                "score": 44600,
+                "rank": 2,
+                "final_score": 24.6
+            },
+            {
+                "id": "急急急不来的",
+                "score": 13300,
+                "rank": 3,
+                "final_score": -26.7
+            },
+            {
+                "id": "青白、",
+                "score": -12000,
+                "rank": 4,
+                "final_score": -72.0
+            }
+        ]
+    },
+    {
+        "game_id": "04ca8450-04ca-42c2-8b42-7a1f78c19c45",
+        "timestamp": "2025-06-23",
+        "results": [
+            {
+                "id": "暖兮、橙子",
+                "score": 94500,
+                "rank": 1,
+                "final_score": 114.5
+            },
+            {
+                "id": "0归离0",
+                "score": 9200,
+                "rank": 2,
+                "final_score": -10.8
+            },
+            {
+                "id": "HuiQ",
+                "score": 7200,
+                "rank": 3,
+                "final_score": -32.8
+            },
+            {
+                "id": "迦楠大人",
+                "score": -10900,
+                "rank": 4,
+                "final_score": -70.9
+            }
+        ]
+    },
+    {
+        "game_id": "e2e0691b-ee38-4103-8369-3641cfb0731e",
+        "timestamp": "2025-06-23",
+        "results": [
+            {
+                "id": "暖兮、橙子",
+                "score": 32700,
+                "rank": 1,
+                "final_score": 52.7
+            },
+            {
+                "id": "迦楠大人",
+                "score": 25700,
+                "rank": 2,
+                "final_score": 5.7
+            },
+            {
+                "id": "萌新就会送",
+                "score": 24600,
+                "rank": 3,
+                "final_score": -15.4
+            },
+            {
+                "id": "0归离0",
+                "score": 17000,
+                "rank": 4,
+                "final_score": -43.0
+            }
+        ]
+    },
+    {
+        "game_id": "b07a244a-6eab-4420-a47a-49d5fed5dc1d",
+        "timestamp": "2025-06-24",
+        "results": [
+            {
+                "id": "超级圣光铠甲",
+                "score": 35800,
+                "rank": 1,
+                "final_score": 55.8
+            },
+            {
+                "id": "钢dio",
+                "score": 34700,
+                "rank": 2,
+                "final_score": 14.7
+            },
+            {
+                "id": "wdnmsstf",
+                "score": 26800,
+                "rank": 3,
+                "final_score": -13.2
+            },
+            {
+                "id": "萌新就会送",
+                "score": 2700,
+                "rank": 4,
+                "final_score": -57.3
+            }
+        ]
+    },
+    {
+        "game_id": "20b708b8-1eb1-4f21-8bec-6f640078c313",
+        "timestamp": "2025-06-24",
+        "results": [
+            {
+                "id": "青城士无双",
+                "score": 62300,
+                "rank": 1,
+                "final_score": 82.3
+            },
+            {
+                "id": "思诺星梦",
+                "score": 30900,
+                "rank": 2,
+                "final_score": 10.9
+            },
+            {
+                "id": "隔壁最穷老金",
+                "score": 29500,
+                "rank": 3,
+                "final_score": -10.5
+            },
+            {
+                "id": "言和一生推",
+                "score": -22700,
+                "rank": 4,
+                "final_score": -82.7
+            }
+        ]
+    },
+    {
+        "game_id": "4502d429-3cdf-4125-b9b4-f1f00e0987ba",
+        "timestamp": "2025-06-24",
+        "results": [
+            {
+                "id": "天绫酱",
+                "score": 40900,
+                "rank": 1,
+                "final_score": 60.9
+            },
+            {
+                "id": "钢dio",
+                "score": 26000,
+                "rank": 2,
+                "final_score": 6.0
+            },
+            {
+                "id": "萌新就会送",
+                "score": 23300,
+                "rank": 3,
+                "final_score": -16.7
+            },
+            {
+                "id": "Krier",
+                "score": 9800,
+                "rank": 4,
+                "final_score": -50.2
+            }
+        ]
+    },
+    {
+        "game_id": "8adc633b-411f-4324-83c5-bd5d721bfaf2",
+        "timestamp": "2025-06-24",
+        "results": [
+            {
+                "id": "青城士无双",
+                "score": 32800,
+                "rank": 1,
+                "final_score": 52.8
+            },
+            {
+                "id": "言和一生推",
+                "score": 26300,
+                "rank": 2,
+                "final_score": 6.3
+            },
+            {
+                "id": "简朴斋人",
+                "score": 22800,
+                "rank": 3,
+                "final_score": -17.2
+            },
+            {
+                "id": "隔壁最穷老金",
+                "score": 18100,
+                "rank": 4,
+                "final_score": -41.9
+            }
+        ]
+    },
+    {
+        "game_id": "03d325ab-b4e7-416c-8833-ef6e69b35547",
+        "timestamp": "2025-06-25",
+        "results": [
+            {
+                "id": "0归离0",
+                "score": 37800,
+                "rank": 1,
+                "final_score": 57.8
+            },
+            {
+                "id": "HuiQ",
+                "score": 28000,
+                "rank": 2,
+                "final_score": 8.0
+            },
+            {
+                "id": "暖兮、橙子",
+                "score": 25700,
+                "rank": 3,
+                "final_score": -14.3
+            },
+            {
+                "id": "pandenk",
+                "score": 8500,
+                "rank": 4,
+                "final_score": -51.5
+            }
+        ]
+    },
+    {
+        "game_id": "ed3deb57-20e4-4ab0-b372-cf542d16a9b7",
+        "timestamp": "2025-06-25",
+        "results": [
+            {
+                "id": "pandenk",
+                "score": 32800,
+                "rank": 1,
+                "final_score": 52.8
+            },
+            {
+                "id": "暖兮、橙子",
+                "score": 29600,
+                "rank": 2,
+                "final_score": 9.6
+            },
+            {
+                "id": "济邦我的济邦啊",
+                "score": 21300,
+                "rank": 3,
+                "final_score": -18.7
+            },
+            {
+                "id": "0归离0",
+                "score": 16300,
+                "rank": 4,
+                "final_score": -43.7
+            }
+        ]
+    },
+    {
+        "game_id": "32fb0982-23c0-430e-975d-fda467eb9c6f",
+        "timestamp": "2025-06-26",
+        "results": [
+            {
+                "id": "萌新就会送",
+                "score": 44300,
+                "rank": 1,
+                "final_score": 64.3
+            },
+            {
+                "id": "Jerry32",
+                "score": 31400,
+                "rank": 2,
+                "final_score": 11.4
+            },
+            {
+                "id": "青城士无双",
+                "score": 16100,
+                "rank": 3,
+                "final_score": -23.9
+            },
+            {
+                "id": "青白、",
+                "score": 8200,
+                "rank": 4,
+                "final_score": -51.8
+            }
+        ]
+    },
+    {
+        "game_id": "388669dd-56fc-4c96-9a18-e19b8ddd8e3f",
+        "timestamp": "2025-06-26",
+        "results": [
+            {
+                "id": "青城士无双",
+                "score": 28900,
+                "rank": 1,
+                "final_score": 48.9
+            },
+            {
+                "id": "济邦我的济邦啊",
+                "score": 26800,
+                "rank": 2,
+                "final_score": 6.8
+            },
+            {
+                "id": "超级圣光铠甲",
+                "score": 24300,
+                "rank": 3,
+                "final_score": -15.7
+            },
+            {
+                "id": "青白、",
+                "score": 20000,
+                "rank": 4,
+                "final_score": -40.0
+            }
+        ]
+    },
+    {
+        "game_id": "ed2f7aba-2a3d-491c-aed5-221a997d6b5a",
+        "timestamp": "2025-06-27",
+        "results": [
+            {
+                "id": "隔壁最穷老金",
+                "score": 51100,
+                "rank": 1,
+                "final_score": 51.1
+            },
+            {
+                "id": "棋怪红尘笑",
+                "score": 51100,
+                "rank": 1,
+                "final_score": 51.1
+            },
+            {
+                "id": "HuiQ",
+                "score": 1400,
+                "rank": 3,
+                "final_score": -38.6
+            },
+            {
+                "id": "思诺星梦",
+                "score": -3600,
+                "rank": 4,
+                "final_score": -63.6
+            }
+        ]
+    },
+    {
+        "game_id": "fcbbc883-82e6-4880-800c-8e1078880fd5",
+        "timestamp": "2025-06-27",
+        "results": [
+            {
+                "id": "pandenk",
+                "score": 37100,
+                "rank": 1,
+                "final_score": 57.1
+            },
+            {
+                "id": "Krier",
+                "score": 34500,
+                "rank": 2,
+                "final_score": 14.5
+            },
+            {
+                "id": "通辽侯",
+                "score": 24200,
+                "rank": 3,
+                "final_score": -15.8
+            },
+            {
+                "id": "急急急不来的",
+                "score": 4200,
+                "rank": 4,
+                "final_score": -55.8
+            }
+        ]
+    },
+    {
+        "game_id": "ecc15986-19a1-4357-bd0f-f08adddb74dc",
+        "timestamp": "2025-06-27",
+        "results": [
+            {
+                "id": "天绫酱",
+                "score": 39800,
+                "rank": 1,
+                "final_score": 59.8
+            },
+            {
+                "id": "pandenk",
+                "score": 29000,
+                "rank": 2,
+                "final_score": 9.0
+            },
+            {
+                "id": "Krier",
+                "score": 20500,
+                "rank": 3,
+                "final_score": -19.5
+            },
+            {
+                "id": "0归离0",
+                "score": 10700,
+                "rank": 4,
+                "final_score": -49.3
+            }
+        ]
+    },
+    {
+        "game_id": "8125a5be-e34b-4d94-ad9e-37ccbfee2c85",
+        "timestamp": "2025-06-27",
+        "results": [
+            {
+                "id": "济邦我的济邦啊",
+                "score": 46200,
+                "rank": 1,
+                "final_score": 66.2
+            },
+            {
+                "id": "思诺星梦",
+                "score": 26400,
+                "rank": 2,
+                "final_score": 6.4
+            },
+            {
+                "id": "棋怪红尘笑",
+                "score": 22900,
+                "rank": 3,
+                "final_score": -17.1
+            },
+            {
+                "id": "隔壁最穷老金",
+                "score": 4500,
+                "rank": 4,
+                "final_score": -55.5
+            }
+        ]
+    },
+    {
+        "game_id": "3f8e5cf4-88b9-4373-9ece-28c887541a33",
+        "timestamp": "2025-06-30",
+        "results": [
+            {
+                "id": "青城士无双",
+                "score": 45300,
+                "rank": 1,
+                "final_score": 65.3
+            },
+            {
+                "id": "Krier",
+                "score": 27600,
+                "rank": 2,
+                "final_score": 7.6
+            },
+            {
+                "id": "通辽侯",
+                "score": 26100,
+                "rank": 3,
+                "final_score": -13.9
+            },
+            {
+                "id": "暖兮、橙子",
+                "score": 1000,
+                "rank": 4,
+                "final_score": -59.0
+            }
+        ]
+    },
+    {
+        "game_id": "633ad584-d89c-47d7-8be1-f7a63f8af63d",
+        "timestamp": "2025-06-30",
+        "results": [
+            {
+                "id": "超级圣光铠甲",
+                "score": 46100,
+                "rank": 1,
+                "final_score": 66.1
+            },
+            {
+                "id": "棋怪红尘笑",
+                "score": 35700,
+                "rank": 2,
+                "final_score": 15.7
+            },
+            {
+                "id": "0归离0",
+                "score": 10900,
+                "rank": 3,
+                "final_score": -29.1
+            },
+            {
+                "id": "冬芝",
+                "score": 7300,
+                "rank": 4,
+                "final_score": -52.7
+            }
+        ]
+    },
+    {
+        "game_id": "85e21e21-f07a-400a-b580-454129e8858e",
+        "timestamp": "2025-06-30",
+        "results": [
+            {
+                "id": "seaean",
+                "score": 46400,
+                "rank": 1,
+                "final_score": 66.4
+            },
+            {
+                "id": "萌新就会送",
+                "score": 42100,
+                "rank": 2,
+                "final_score": 22.1
+            },
+            {
+                "id": "pandenk",
+                "score": 15400,
+                "rank": 3,
+                "final_score": -24.6
+            },
+            {
+                "id": "天绫酱",
+                "score": -3900,
+                "rank": 4,
+                "final_score": -63.9
+            }
+        ]
+    },
+    {
+        "game_id": "1552da1e-6304-433e-9f6b-baf60d47e04e",
+        "timestamp": "2025-06-30",
+        "results": [
+            {
+                "id": "言和一生推",
+                "score": 36200,
+                "rank": 1,
+                "final_score": 56.2
+            },
+            {
+                "id": "萌新就会送",
+                "score": 31100,
+                "rank": 2,
+                "final_score": 11.1
+            },
+            {
+                "id": "天绫酱",
+                "score": 19900,
+                "rank": 3,
+                "final_score": -20.1
+            },
+            {
+                "id": "seaean",
+                "score": 12800,
+                "rank": 4,
+                "final_score": -47.2
+            }
+        ]
+    },
+    {
+        "game_id": "6ff6fe9a-b6f9-432d-b43b-5ff974ebc9ec",
+        "timestamp": "2025-07-01",
+        "results": [
+            {
+                "id": "青白、",
+                "score": 59300,
+                "rank": 1,
+                "final_score": 79.3
+            },
+            {
+                "id": "0归离0",
+                "score": 25600,
+                "rank": 2,
+                "final_score": 5.6
+            },
+            {
+                "id": "天绫酱",
+                "score": 12700,
+                "rank": 3,
+                "final_score": -27.3
+            },
+            {
+                "id": "冬芝",
+                "score": 2400,
+                "rank": 4,
+                "final_score": -57.6
+            }
+        ]
+    },
+    {
+        "game_id": "26c031e1-dff5-4ee1-b63a-eb669cca589e",
+        "timestamp": "2025-07-01",
+        "results": [
+            {
+                "id": "棋怪红尘笑",
+                "score": 96800,
+                "rank": 1,
+                "final_score": 116.8
+            },
+            {
+                "id": "Krier",
+                "score": 14000,
+                "rank": 2,
+                "final_score": -6.0
+            },
+            {
+                "id": "言和一生推",
+                "score": -4700,
+                "rank": 3,
+                "final_score": -44.7
+            },
+            {
+                "id": "简朴斋人",
+                "score": -6100,
+                "rank": 4,
+                "final_score": -66.1
+            }
+        ]
+    },
+    {
+        "game_id": "00ff716c-b26a-45da-bec1-cfa7f1a2d323",
+        "timestamp": "2025-07-01",
+        "results": [
+            {
+                "id": "天绫酱",
+                "score": 57500,
+                "rank": 1,
+                "final_score": 77.5
+            },
+            {
+                "id": "隔壁最穷老金",
+                "score": 19300,
+                "rank": 2,
+                "final_score": -0.7
+            },
+            {
+                "id": "钢dio",
+                "score": 14600,
+                "rank": 3,
+                "final_score": -25.4
+            },
+            {
+                "id": "0归离0",
+                "score": 8600,
+                "rank": 4,
+                "final_score": -51.4
+            }
+        ]
+    },
+    {
+        "game_id": "b6419192-e02b-4e99-b557-6830b71a3615",
+        "timestamp": "2025-07-01",
+        "results": [
+            {
+                "id": "青城士无双",
+                "score": 68900,
+                "rank": 1,
+                "final_score": 88.9
+            },
+            {
+                "id": "Jerry32",
+                "score": 49900,
+                "rank": 2,
+                "final_score": 29.9
+            },
+            {
+                "id": "言和一生推",
+                "score": -7700,
+                "rank": 3,
+                "final_score": -47.7
+            },
+            {
+                "id": "思诺星梦",
+                "score": -11100,
+                "rank": 4,
+                "final_score": -71.1
+            }
+        ]
+    },
+    {
+        "game_id": "24ec3006-8c23-4140-8f3f-35760f03ed25",
+        "timestamp": "2025-07-02",
+        "results": [
+            {
+                "id": "pandenk",
+                "score": 52200,
+                "rank": 1,
+                "final_score": 72.2
+            },
+            {
+                "id": "冬芝",
+                "score": 18200,
+                "rank": 2,
+                "final_score": -1.8
+            },
+            {
+                "id": "wdnmsstf",
+                "score": 15200,
+                "rank": 3,
+                "final_score": -24.8
+            },
+            {
+                "id": "超级圣光铠甲",
+                "score": 14400,
+                "rank": 4,
+                "final_score": -45.6
+            }
+        ]
+    },
+    {
+        "game_id": "2117a8d1-9b70-48fa-a5f6-090db6c4f6c3",
+        "timestamp": "2025-07-02",
+        "results": [
+            {
+                "id": "wdnmsstf",
+                "score": 31200,
+                "rank": 1,
+                "final_score": 51.2
+            },
+            {
+                "id": "冬芝",
+                "score": 23800,
+                "rank": 2,
+                "final_score": 3.8
+            },
+            {
+                "id": "pandenk",
+                "score": 23500,
+                "rank": 3,
+                "final_score": -16.5
+            },
+            {
+                "id": "Jerry32",
+                "score": 21500,
+                "rank": 4,
+                "final_score": -38.5
+            }
+        ]
+    },
+    {
+        "game_id": "c733629a-ded7-4ad5-a4fd-94c6cb4be599",
+        "timestamp": "2025-07-02",
+        "results": [
+            {
+                "id": "0归离0",
+                "score": 56600,
+                "rank": 1,
+                "final_score": 76.6
+            },
+            {
+                "id": "隔壁最穷老金",
+                "score": 25900,
+                "rank": 2,
+                "final_score": 5.9
+            },
+            {
+                "id": "HuiQ",
+                "score": 24900,
+                "rank": 3,
+                "final_score": -15.1
+            },
+            {
+                "id": "简朴斋人",
+                "score": -7400,
+                "rank": 4,
+                "final_score": -67.4
+            }
+        ]
+    },
+    {
+        "game_id": "471935a9-8a34-475a-9d50-6ade42c5efa7",
+        "timestamp": "2025-07-02",
+        "results": [
+            {
+                "id": "济邦我的济邦啊",
+                "score": 42200,
+                "rank": 1,
+                "final_score": 62.2
+            },
+            {
+                "id": "简朴斋人",
+                "score": 23800,
+                "rank": 2,
+                "final_score": 3.8
+            },
+            {
+                "id": "laznig",
+                "score": 21200,
+                "rank": 3,
+                "final_score": -18.8
+            },
+            {
+                "id": "0归离0",
+                "score": 12800,
+                "rank": 4,
+                "final_score": -47.2
+            }
+        ]
+    },
+    {
+        "game_id": "d0296990-d109-44d4-8457-593886e857dd",
+        "timestamp": "2025-07-04",
+        "results": [
+            {
+                "id": "HuiQ",
+                "score": 35500,
+                "rank": 1,
+                "final_score": 55.5
+            },
+            {
+                "id": "pandenk",
+                "score": 34600,
+                "rank": 2,
+                "final_score": 14.6
+            },
+            {
+                "id": "0归离0",
+                "score": 22900,
+                "rank": 3,
+                "final_score": -17.1
+            },
+            {
+                "id": "棋怪红尘笑",
+                "score": 7000,
+                "rank": 4,
+                "final_score": -53.0
+            }
+        ]
+    },
+    {
+        "game_id": "35e41526-6242-432d-9a51-2999159705b1",
+        "timestamp": "2025-07-04",
+        "results": [
+            {
+                "id": "0归离0",
+                "score": 41800,
+                "rank": 1,
+                "final_score": 61.8
+            },
+            {
+                "id": "Baka9",
+                "score": 31300,
+                "rank": 2,
+                "final_score": 11.3
+            },
+            {
+                "id": "青城士无双",
+                "score": 15900,
+                "rank": 3,
+                "final_score": -24.1
+            },
+            {
+                "id": "济邦我的济邦啊",
+                "score": 11000,
+                "rank": 4,
+                "final_score": -49.0
+            }
+        ]
+    },
+    {
+        "game_id": "002521f0-a73a-4135-9bbc-15886eb6ff7f",
+        "timestamp": "2025-07-05",
+        "results": [
+            {
+                "id": "Jerry32",
+                "score": 43000,
+                "rank": 1,
+                "final_score": 63.0
+            },
+            {
+                "id": "通辽侯",
+                "score": 29500,
+                "rank": 2,
+                "final_score": 9.5
+            },
+            {
+                "id": "青城士无双",
+                "score": 21300,
+                "rank": 3,
+                "final_score": -18.7
+            },
+            {
+                "id": "青白、",
+                "score": 6200,
+                "rank": 4,
+                "final_score": -53.8
+            }
+        ]
+    },
+    {
+        "game_id": "04cb4b87-0bda-438d-95d7-59eb4288358b",
+        "timestamp": "2025-07-05",
+        "results": [
+            {
+                "id": "冬芝",
+                "score": 40200,
+                "rank": 1,
+                "final_score": 60.2
+            },
+            {
+                "id": "Baka9",
+                "score": 37300,
+                "rank": 2,
+                "final_score": 17.3
+            },
+            {
+                "id": "HuiQ",
+                "score": 32100,
+                "rank": 3,
+                "final_score": -7.9
+            },
+            {
+                "id": "急急急不来的",
+                "score": -9600,
+                "rank": 4,
+                "final_score": -69.6
+            }
+        ]
+    },
+    {
+        "game_id": "e265a07d-8e5d-4be4-98ed-a8a3e690f835",
+        "timestamp": "2025-07-05",
+        "results": [
+            {
+                "id": "通辽侯",
+                "score": 54600,
+                "rank": 1,
+                "final_score": 74.6
+            },
+            {
+                "id": "青城士无双",
+                "score": 33900,
+                "rank": 2,
+                "final_score": 13.9
+            },
+            {
+                "id": "Jerry32",
+                "score": 8400,
+                "rank": 3,
+                "final_score": -31.6
+            },
+            {
+                "id": "青白、",
+                "score": 3100,
+                "rank": 4,
+                "final_score": -56.9
+            }
+        ]
+    },
+    {
+        "game_id": "e1bf7e4c-d3cd-4c6a-9d39-1ff1fd3b8328",
+        "timestamp": "2025-07-05",
+        "results": [
+            {
+                "id": "冬芝",
+                "score": 42400,
+                "rank": 1,
+                "final_score": 62.4
+            },
+            {
+                "id": "急急急不来的",
+                "score": 38700,
+                "rank": 2,
+                "final_score": 18.7
+            },
+            {
+                "id": "HuiQ",
+                "score": 21200,
+                "rank": 3,
+                "final_score": -18.8
+            },
+            {
+                "id": "Baka9",
+                "score": -2300,
+                "rank": 4,
+                "final_score": -62.3
+            }
+        ]
+    },
+    {
+        "game_id": "ca4e5545-e8de-4914-9382-87ad342f9df1",
+        "timestamp": "2025-07-06",
+        "results": [
+            {
+                "id": "laznig",
+                "score": 53400,
+                "rank": 1,
+                "final_score": 73.4
+            },
+            {
+                "id": "wdnmsstf",
+                "score": 18900,
+                "rank": 2,
+                "final_score": -1.1
+            },
+            {
+                "id": "暖兮、橙子",
+                "score": 15400,
+                "rank": 3,
+                "final_score": -24.6
+            },
+            {
+                "id": "思诺星梦",
+                "score": 12300,
+                "rank": 4,
+                "final_score": -47.7
+            }
+        ]
+    },
+    {
+        "game_id": "7e33e751-66d6-4aa1-890c-8ce5afb6fd88",
+        "timestamp": "2025-07-06",
+        "results": [
+            {
+                "id": "wdnmsstf",
+                "score": 41900,
+                "rank": 1,
+                "final_score": 61.9
+            },
+            {
+                "id": "seaean",
+                "score": 27300,
+                "rank": 2,
+                "final_score": 7.3
+            },
+            {
+                "id": "钢dio",
+                "score": 16500,
+                "rank": 3,
+                "final_score": -23.5
+            },
+            {
+                "id": "laznig",
+                "score": 14300,
+                "rank": 4,
+                "final_score": -45.7
+            }
+        ]
+    }
+]
