@@ -8,7 +8,7 @@ part of 'player.dart';
 
 Player _$PlayerFromJson(Map<String, dynamic> json) => Player(
   name: json['队员'] as String,
-  mahjongId: json['雀魂ID'] as String,
+  mahjongId: json['雀魂ID'] as String?,
   team: json['队伍'] as String,
   score: (json['score'] as num?)?.toDouble() ?? 0.0,
   gamesPlayed: (json['半庄数'] as num?)?.toInt() ?? 0,

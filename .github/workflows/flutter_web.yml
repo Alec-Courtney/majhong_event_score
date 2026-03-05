@@ -18,14 +18,12 @@ jobs:
 
       - name: Get dependencies
         run: flutter pub get
-        working-directory: ./flutter_application_1 # Specify working directory
 
       - name: Build Web
         run: flutter build web --release --base-href /majhong_event_score/
-        working-directory: ./flutter_application_1 # Specify working directory
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./flutter_application_1/build/web
+          publish_dir: ./build/web

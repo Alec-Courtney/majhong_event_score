@@ -7,11 +7,11 @@ class Player {
   @JsonKey(name: '队员')
   final String name;
   @JsonKey(name: '雀魂ID')
-  final String mahjongId;
+  final String? mahjongId;
   @JsonKey(name: '队伍')
   final String team;
 
-  // 统计数据，初始化为0或默认值
+  /// 统计数据，初始化为0或默认值
   double score;
   @JsonKey(name: '半庄数')
   int gamesPlayed;
@@ -36,7 +36,7 @@ class Player {
 
   Player({
     required this.name,
-    required this.mahjongId,
+    this.mahjongId,
     required this.team,
     this.score = 0.0,
     this.gamesPlayed = 0,
@@ -54,7 +54,7 @@ class Player {
   factory Player.fromJson(Map<String, dynamic> json) => _$PlayerFromJson(json);
   Map<String, dynamic> toJson() => _$PlayerToJson(this);
 
-  // 用于重置统计数据的方法
+  /// 用于重置统计数据的方法
   void resetStats() {
     score = 0.0;
     gamesPlayed = 0;
