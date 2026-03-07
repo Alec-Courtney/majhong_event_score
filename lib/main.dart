@@ -52,24 +52,22 @@
 /// - 这种设计确保了应用关闭后数据不会丢失，并在下次启动时能够恢复到上次的状态。
 ///
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:uuid/uuid.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'dart:html' as html; // For web-specific functionalities like downloading files
-import 'package:flutter/foundation.dart' show kIsWeb; // Add this import
 
 import 'models/player.dart';
 import 'models/game_log.dart';
 import 'models/team.dart'; // Import the new Team model
 import 'models/event.dart'; // Import the new Event model
 import 'models/column_config.dart'; // Import the ColumnConfig model
+import 'platform/file_transfer.dart' as file_transfer;
+import 'services/event_stats_calculator.dart';
+import 'services/game_result_calculator.dart';
 import 'dart:ui' as ui; // Import for toImage
 import 'dart:typed_data'; // Import for Uint8List
 import 'package:flutter/rendering.dart'; // Import for RenderRepaintBoundary
-import 'package:http/http.dart' as http;
 
 import 'widgets/event_management_dialog.dart'; // Import the new EventManagementDialog
 import 'widgets/player_management_dialog.dart'; // Import the new PlayerManagementDialog
@@ -209,7 +207,7 @@ class _MainAppState extends State<MainApp> {
     if (currentEvent == null) return;
 
     /// 从currentEvent.playerBaseData填充playerToTeam和allTeams
-    /// 过滤掉mahjongId为null的玩家，或者为他们生成一个临时的唯一ID作为键
+    /// 过滤掉mahjongId为null的玩家
     playerToTeam = {
       for (var p in currentEvent!.playerBaseData)
         if (p.mahjongId != null) p.mahjongId!: p.team
@@ -233,102 +231,16 @@ class _MainAppState extends State<MainApp> {
   void _recalculateAllStatsFromLog() {
     if (currentEvent == null) return;
 
-    /// 重置玩家统计数据
-    playerDf = currentEvent!.playerBaseData.map((p) {
-      final newPlayer = Player(name: p.name, mahjongId: p.mahjongId, team: p.team);
-      newPlayer.resetStats(); /// 重置所有可变统计数据
-      return newPlayer;
-    }).toList();
+    final EventStatsResult result = EventStatsCalculator.recalculate(
+      event: currentEvent!,
+      allTeams: allTeams,
+      playerToTeam: playerToTeam,
+    );
 
-    /// 创建一个用于通过mahjongId快速查找的映射，过滤掉mahjongId为null的玩家
-    final Map<String, Player> playerMap = {
-      for (var p in playerDf)
-        if (p.mahjongId != null) p.mahjongId!: p
-    };
-    final Map<String, List<int>> playerRawScores = {
-      for (var p in playerDf)
-        if (p.mahjongId != null) p.mahjongId!: []
-    };
-
-    /// 重置团队统计数据
-    teamDf = allTeams.map((teamName) => Team(name: teamName)).toList();
-    final Map<String, Team> teamMap = {for (var t in teamDf) t.name: t};
-
-    for (var game in currentEvent!.gameLog) {
-      for (var result in game.results) {
-        final player = playerMap[result.id];
-        if (player == null) continue;
-
-        final teamName = playerToTeam[player.mahjongId];
-        if (teamName == null) continue;
-        final team = teamMap[teamName];
-        if (team == null) continue;
-
-        player.score += result.finalScore;
-        player.gamesPlayed += 1;
-        switch (result.rank) {
-          case 1: player.rank1 += 1; break;
-          case 2: player.rank2 += 1; break;
-          case 3: player.rank3 += 1; break;
-          case 4: player.rank4 += 1; break;
-        }
-        if (result.score > player.highestScore) {
-          player.highestScore = result.score;
-        }
-        playerRawScores[player.mahjongId]?.add(result.score);
-
-        team.score += result.finalScore;
-        team.gamesPlayed += 1;
-        switch (result.rank) {
-          case 1: team.rank1 += 1; break;
-          case 2: team.rank2 += 1; break;
-          case 3: team.rank3 += 1; break;
-          case 4: team.rank4 += 1; break;
-        }
-      }
-    }
-
-    /// 根据ColumnConfig计算派生玩家统计数据
-    for (var player in playerDf) {
-      if (player.gamesPlayed > 0) {
-        for (var col in currentEvent!.playerColumns) {
-          if (col.isPlayerColumn) {
-            switch (col.calculationType) {
-              case 'avoidFourthRate':
-                player.avoidFourthRate = ((player.rank1 + player.rank2 + player.rank3) / player.gamesPlayed) * 100;
-                break;
-              case 'consecutiveWinRate':
-                player.consecutiveWinRate = ((player.rank1 + player.rank2) / player.gamesPlayed) * 100;
-                break;
-              case 'averageRank':
-                player.averageRank = (player.rank1 * 1 + player.rank2 * 2 + player.rank3 * 3 + player.rank4 * 4) / player.gamesPlayed;
-                break;
-              case 'averageGameScore':
-                player.averageGameScore = playerRawScores[player.mahjongId]!.reduce((a, b) => a + b) / player.gamesPlayed;
-                break;
-              /// 在此处添加更多计算类型
-            }
-          }
-        }
-      }
-    }
-
-    /// 排序玩家和团队
-    playerDf.sort((a, b) => b.score.compareTo(a.score));
-    teamDf.sort((a, b) => b.score.compareTo(a.score));
-
-    /// 计算团队分数差异
-    if (teamDf.isNotEmpty) {
-      for (int i = 0; i < teamDf.length; i++) {
-        if (i == 0) {
-          teamDf[i].scoreDifference = 0.0; /// 排名第一的团队没有差异
-        } else {
-          teamDf[i].scoreDifference = (teamDf[i].score - teamDf[i-1].score).abs();
-        }
-      }
-    }
-
-    setState(() {}); /// 更新UI
+    setState(() {
+      playerDf = result.playerStats;
+      teamDf = result.teamStats;
+    });
   }
 
   void _showSnackBar(String message, {bool isError = false}) {
@@ -738,9 +650,7 @@ class _MainAppState extends State<MainApp> {
     }
 
     final int playerCount = currentEvent!.mahjongType == "三人麻将" ? 3 : 4;
-    List<Map<String, dynamic>> gameData = [];
-    List<String> playerIdsInGame = [];
-    int totalRawScore = 0;
+    final List<GameEntry> entries = [];
 
     for (int i = 0; i < playerCount; i++) {
       String playerId = _idControllers[i].text.trim();
@@ -750,71 +660,28 @@ class _MainAppState extends State<MainApp> {
         continue;
       }
 
-      /// 使用currentEvent的playerBaseData进行查找
-      final playerInBase = currentEvent!.playerBaseData.firstWhere(
-        (p) => p.mahjongId == playerId,
-        orElse: () => Player(name: '', mahjongId: null, team: ''), /// 带有null mahjongId的虚拟玩家
-      );
-
-      if (playerInBase.mahjongId == null || playerInBase.mahjongId!.isEmpty) { /// 检查是否返回了虚拟玩家或mahjongId为空
-        _showErrorDialog("未找到选手ID: $playerId");
-        return;
-      }
-
       int? score = int.tryParse(scoreStr);
       if (score == null) {
         _showErrorDialog("选手 $playerId 的分数必须是数字。");
         return;
       }
 
-      gameData.add({'id': playerId, 'score': score});
-      playerIdsInGame.add(playerId);
-      totalRawScore += score;
+      entries.add(GameEntry(playerId: playerId, rawScore: score));
     }
 
-    if (gameData.length != playerCount) {
-      _showErrorDialog("必须输入 ${playerCount} 名选手的数据。");
-      return;
-    }
-    if (playerIdsInGame.toSet().length != playerCount) {
-      _showErrorDialog("错误：一局内的 ${playerCount} 名选手不能重复。");
-      return;
-    }
-    /// 仅针对四人麻将进行团队检查
-    /// 确保所有选手都有对应的队伍信息，并且来自不同的队伍
-    if (currentEvent!.mahjongType == "四人麻将") {
-      final Set<String> teamsInGame = {};
-      for (String id in playerIdsInGame) {
-        final team = playerToTeam[id];
-        if (team == null) {
-          _showErrorDialog("错误：选手ID $id 没有对应的队伍信息。");
-          return;
-        }
-        teamsInGame.add(team);
-      }
-      if (teamsInGame.length != 4) {
-        _showErrorDialog("错误：四人麻将一局内的四名选手必须来自不同的队伍。");
-        return;
-      }
-    }
-    if (totalRawScore != currentEvent!.scoreCheckTotal) {
-      _showErrorDialog("错误：${playerCount} 名选手的场内总分必须为 ${currentEvent!.scoreCheckTotal}，当前为 $totalRawScore。");
+    final String? error = GameResultCalculator.validateEntries(
+      event: currentEvent!,
+      entries: entries,
+    );
+    if (error != null) {
+      _showErrorDialog(error);
       return;
     }
 
-    gameData.sort((a, b) => b['score'].compareTo(a['score']));
-    
-    List<GameResult> results = [];
-    for (int i = 0; i < gameData.length; i++) {
-      int rank = i + 1;
-      double finalScore = (gameData[i]['score'] - currentEvent!.calculationBasePoint) / 1000 + (currentEvent!.basePoints[rank.toString()] ?? 0.0);
-      results.add(GameResult(
-        id: gameData[i]['id'],
-        score: gameData[i]['score'],
-        rank: rank,
-        finalScore: finalScore,
-      ));
-    }
+    final List<GameResult> results = GameResultCalculator.calculateResults(
+      event: currentEvent!,
+      entries: entries,
+    );
     _showAdjustmentWindow(results);
   }
 
@@ -1155,12 +1022,11 @@ class _MainAppState extends State<MainApp> {
   }
 
   void _downloadImage(Uint8List bytes, String fileName) {
-    final blob = html.Blob([bytes], 'image/png');
-    final url = html.Url.createObjectUrlFromBlob(blob);
-    final anchor = html.AnchorElement(href: url)
-      ..setAttribute("download", fileName)
-      ..click();
-    html.Url.revokeObjectUrl(url);
+    try {
+      file_transfer.downloadBytes(bytes, fileName: fileName, mimeType: 'image/png');
+    } on UnsupportedError catch (e) {
+      _showErrorDialog(e.message ?? "当前平台不支持此操作。");
+    }
   }
 
   void _openEventManagementWindow(BuildContext context) {

@@ -2,11 +2,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:html' as html; // For web-specific functionalities like downloading files
-import 'package:http/http.dart' as http;
 
 import '../models/event.dart';
 import '../models/column_config.dart';
+import '../platform/file_transfer.dart' as file_transfer;
 import 'column_config_dialog.dart'; // Import the new ColumnConfigDialog
 
 class EventManagementDialog extends StatefulWidget {
@@ -438,58 +437,51 @@ class _EventManagementDialogState extends State<EventManagementDialog> {
   }
 
   Future<void> _importEventsFromFile() async {
-    final html.FileUploadInputElement uploadInput = html.FileUploadInputElement();
-    uploadInput.accept = '.json'; // Accept only JSON files
-    uploadInput.click();
-
-    uploadInput.onChange.listen((e) {
-      final files = uploadInput.files;
-      if (files != null && files.isNotEmpty) {
-        final file = files.first;
-        final reader = html.FileReader();
-        reader.readAsText(file);
-        reader.onLoadEnd.listen((e) async {
-          try {
-            final String jsonString = reader.result as String;
-            final List<dynamic> jsonList = json.decode(jsonString);
-            final List<Event> importedEvents = jsonList.map((e) => Event.fromJson(e)).toList();
-
-            if (importedEvents.isEmpty) {
-              widget.showSnackBar("导入的文件不包含任何赛事数据。", isError: true);
-              return;
-            }
-
-            final bool? confirm = await showDialog<bool>(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  title: const Text("确认导入"),
-                  content: const Text("这将用文件中的数据覆盖所有当前赛事数据。\n此操作无法撤销。是否继续？"),
-                  actions: <Widget>[
-                    TextButton(
-                      child: const Text("取消"),
-                      onPressed: () => Navigator.of(context).pop(false),
-                    ),
-                    TextButton(
-                      child: const Text("覆盖并导入"),
-                      onPressed: () => Navigator.of(context).pop(true),
-                    ),
-                  ],
-                );
-              },
-            );
-
-            if (confirm == true) {
-              widget.onEventsUpdated(importedEvents); // This will now trigger the centralized update logic in main.dart
-              widget.showSnackBar("所有赛事数据已从文件成功导入。");
-              Navigator.of(context).pop(); // Close the event management dialog
-            }
-          } catch (err) {
-            widget.showSnackBar("导入失败：文件格式无效或内容损坏。 $err", isError: true);
-          }
-        });
+    try {
+      final String? jsonString = await file_transfer.pickTextFile(accept: '.json');
+      if (jsonString == null) {
+        widget.showSnackBar("已取消导入。");
+        return;
       }
-    });
+
+      final List<dynamic> jsonList = json.decode(jsonString);
+      final List<Event> importedEvents = jsonList.map((e) => Event.fromJson(e)).toList();
+
+      if (importedEvents.isEmpty) {
+        widget.showSnackBar("导入的文件不包含任何赛事数据。", isError: true);
+        return;
+      }
+
+      final bool? confirm = await showDialog<bool>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text("确认导入"),
+            content: const Text("这将用文件中的数据覆盖所有当前赛事数据。\n此操作无法撤销。是否继续？"),
+            actions: <Widget>[
+              TextButton(
+                child: const Text("取消"),
+                onPressed: () => Navigator.of(context).pop(false),
+              ),
+              TextButton(
+                child: const Text("覆盖并导入"),
+                onPressed: () => Navigator.of(context).pop(true),
+              ),
+            ],
+          );
+        },
+      );
+
+      if (confirm == true) {
+        widget.onEventsUpdated(importedEvents);
+        widget.showSnackBar("所有赛事数据已从文件成功导入。");
+        Navigator.of(context).pop();
+      }
+    } on UnsupportedError catch (e) {
+      widget.showSnackBar(e.message ?? "当前平台不支持此操作。", isError: true);
+    } catch (err) {
+      widget.showSnackBar("导入失败：文件格式无效或内容损坏。 $err", isError: true);
+    }
   }
 
   Widget _buildBasePointInput(BuildContext context, String rankLabel, TextEditingController controller) {
@@ -627,7 +619,12 @@ class _EventManagementDialogState extends State<EventManagementDialog> {
                   onPressed: () {
                     _importEventsFromFile();
                   },
-                  child: const Text("从文件导入赛事"),
+                  child: const Text("从 JSON 导入赛事"),
+                ),
+                const SizedBox(height: 6),
+                const Text(
+                  "提示：导入/导出为 JSON 文件",
+                  style: TextStyle(color: Colors.black54, fontSize: 12),
                 ),
                 const SizedBox(height: 10),
                 ElevatedButton(
@@ -672,16 +669,20 @@ class _EventManagementDialogState extends State<EventManagementDialog> {
                       widget.showSnackBar("没有赛事数据可供导出。", isError: true);
                       return;
                     }
-                    final String jsonString = json.encode(widget.allEvents.map((e) => e.toJson()).toList());
-                    final blob = html.Blob([jsonString], 'application/json');
-                    final url = html.Url.createObjectUrlFromBlob(blob);
-                    final anchor = html.AnchorElement(href: url)
-                      ..setAttribute("download", "majhong_events_backup.json")
-                      ..click();
-                    html.Url.revokeObjectUrl(url);
-                    widget.showSnackBar("所有赛事数据已导出为JSON文件。");
+                    try {
+                      final String jsonString =
+                          json.encode(widget.allEvents.map((e) => e.toJson()).toList());
+                      file_transfer.downloadText(
+                        jsonString,
+                        fileName: "majhong_events_backup.json",
+                        mimeType: "application/json",
+                      );
+                      widget.showSnackBar("所有赛事数据已导出为JSON文件。");
+                    } on UnsupportedError catch (e) {
+                      widget.showSnackBar(e.message ?? "当前平台不支持此操作。", isError: true);
+                    }
                   },
-                  child: const Text("导出所有赛事为JSON"),
+                  child: const Text("导出赛事（JSON）"),
                 ),
               ],
             ),
